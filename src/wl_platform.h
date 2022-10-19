@@ -122,6 +122,7 @@ struct wl_shm;
 #define xdg_surface_interface _glfw_xdg_surface_interface
 #define xdg_toplevel_interface _glfw_xdg_toplevel_interface
 #define xdg_wm_base_interface _glfw_xdg_wm_base_interface
+#define wp_fractional_scale_manager_v1_interface _glfw_wp_fractional_scale_manager_v1_interface
 
 #define GLFW_WAYLAND_WINDOW_STATE         _GLFWwindowWayland  wl;
 #define GLFW_WAYLAND_LIBRARY_WINDOW_STATE _GLFWlibraryWayland wl;
@@ -300,6 +301,7 @@ typedef struct _GLFWlibraryWayland
     struct zwp_relative_pointer_manager_v1* relativePointerManager;
     struct zwp_pointer_constraints_v1*      pointerConstraints;
     struct zwp_idle_inhibit_manager_v1*     idleInhibitManager;
+    struct wp_fractional_scale_manager_v1*     fractionalScaleManager;
 
     _GLFWofferWayland*          offers;
     unsigned int                offerCount;
